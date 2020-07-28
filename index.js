@@ -7,7 +7,7 @@ require('dotenv').config({path:'variables.env'});
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+ 
 //importo los modelos
 require('./models/Usuario');
 require('./models/Nodo');
