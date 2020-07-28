@@ -18,6 +18,8 @@ mongoose.Promise = global.Promise;
 //mongoose.connect(process.env.MONGODB_URI  || `mongodb://localhost:27017/Huertas-Ant`);
 //mongoose.connect(process.env.MONGODB_URI || process.env.DB_URL);
 
+/*"proxy": "http://localhost:5000",*/ //este proxy va en el package json
+
 //pruebaa
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://Usuario-Administrador:60pVzoUn9uRtsUch@cluster0.snph0.mongodb.net/Huertas-Ant?retryWrites=true&w=majority";
