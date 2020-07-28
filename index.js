@@ -24,6 +24,7 @@ const uri = "mongodb+srv://Usuario-Administrador:60pVzoUn9uRtsUch@cluster0.snph0
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("Huertas-Ant").collection("nodos");
+  console.log("Soy la colection: " +collection)
   // perform actions on the collection object
   client.close();
 });
