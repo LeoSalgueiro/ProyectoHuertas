@@ -51,6 +51,9 @@ if (process.env.NODE_ENV === 'production') {
 
 const HOST = process.env.HOST || '0.0.0.0'
 const PORT = process.env.PORT || 5000;
+console.log('me ejecuto en algun lugar lpm')
 app.listen(PORT,HOST, () => {
+  console.log('me ejecuto uachin')
+  console.log(`app running on host ${HOST}`)
   console.log(`app running on port ${PORT}`)
 });
