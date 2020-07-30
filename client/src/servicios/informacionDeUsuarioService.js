@@ -73,6 +73,7 @@ export default {
     
     let response = await axios.post('api/authenticate', {params:{email:email, password: contra}})
     .then((res) =>{
+      console.log("soy la res")
       if(handleResponse(res)!=res.error){ console.log('este es el user final: '+res.data.token)}
       localStorage.setItem('user', JSON.stringify({token:res.data.token, email:email}));
 

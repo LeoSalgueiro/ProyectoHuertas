@@ -1,5 +1,5 @@
 //importo variables de entorno locales
-require('dotenv').config({path:'variables.env'});
+//require('dotenv').config({path:'variables.env'});
 
 
 //  index.js
@@ -21,16 +21,20 @@ mongoose.Promise = global.Promise;
 /*"proxy": "http://localhost:5000",*/ //este proxy va en el package json
 
 //pruebaa
+/*
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://Usuario-Administrador:60pVzoUn9uRtsUch@cluster0.snph0.mongodb.net/Huertas-Ant?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("Huertas-Ant").collection("nodos");
-  console.log("Soy la colection: " +collection)
+
   // perform actions on the collection object
   client.close();
 });
-
+ */
+mongoose.connect('mongodb+srv://Usuario-Administrador:60pVzoUn9uRtsUch@cluster0.snph0.mongodb.net/Huertas-Ant?retryWrites=true&w=majority', {
+  useNewUrlParser: true
+});
 //fin prueba
 app.use(bodyParser.json());
 
@@ -51,8 +55,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 const PORT = process.env.PORT || 5000;
-console.log('me ejecuto en algun lugar lpm')
 app.listen(PORT, () => {
-  console.log('me ejecuto uachin')
+
   console.log(`app running on port ${PORT}`)
 });
