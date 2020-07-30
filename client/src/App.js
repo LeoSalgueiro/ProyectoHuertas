@@ -37,7 +37,7 @@ const sectionStyle = {
 }
 
 const sectionStyle2 = {
-  height: "100%",
+  height: "100%", 
   curpos:0,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
